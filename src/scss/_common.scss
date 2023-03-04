@@ -1,0 +1,13 @@
+@use "./variables";
+
+%transition {
+  transition: all 0.3s ease-out;
+}
+
+%hover {
+  transition: text-shadow .3s ease-out;
+
+  &:hover {
+    text-shadow: currentColor 1px 0 10px;
+  }
+}
