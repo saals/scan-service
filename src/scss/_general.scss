@@ -1,6 +1,7 @@
 @use "./variables" as v;
 @use "./common";
 
+
 html,
 body {
   font-family: v.$body-font;
@@ -59,6 +60,8 @@ a {
     text-decoration: underline;
     outline: 0;
   }
+
+  @extend %hover;
 }
 
 i,
