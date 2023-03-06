@@ -41,22 +41,21 @@ textarea {
   color: v.$text-dark;
 }
 
-a {
+a, button {
   color: v.$text-dark;
   text-decoration: none;
 
   //@extend %transition;
 
   &:visited {
-    color: v.$text-dark;
+    //color: v.$text-dark;
     text-decoration: none;
     outline: 0;
   }
 
   &:focus,
-  &:active,
-  &:hover {
-    color: v.$text-dark;
+  &:active {
+    //color: v.$text-dark;
     text-decoration: underline;
     outline: 0;
   }

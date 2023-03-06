@@ -4,17 +4,19 @@ import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-const Button = ({ color, size, disabled, children }) => {
+const Button = ({ color, size, href, disabled, children }) => {
   const btnClass = cx({
     btn: !size,
     [`btn-${size}`]: size,
     [`${color}`]: color,
   })
 
+  const Tag = href ? 'a' : 'button'
+
   return (
-    <button className={btnClass} disabled={disabled}>
+    <Tag className={btnClass} href={href} disabled={disabled}>
       {children}
-    </button>
+    </Tag>
   )
 }
 

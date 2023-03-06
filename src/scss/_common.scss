@@ -8,6 +8,6 @@
   transition: text-shadow .3s ease-out;
 
   &:hover {
-    text-shadow: currentColor 1px 0 10px;
+    text-shadow: currentColor 0.1rem 0 1rem;
   }
 }
