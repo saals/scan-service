@@ -1,8 +1,8 @@
-import UIPage from './pages/UIPage/UIPage'
+import Layout from './pages/Layout/Layout'
 
 function App() {
   return (
-    <UIPage />
+    <Layout />
   )
 }
 
