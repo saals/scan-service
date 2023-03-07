@@ -4,9 +4,11 @@
 .main {
   //display: flex;
   //flex-direction: column;
+  @extend %container;
+
+  //
   //width: 100%;
   //gap: 2rem;
-  @extend %container;
 }
 
 // UIPage
@@ -14,6 +16,7 @@
   @extend %container;
   border: 1px solid #000;
 }
+
 .row,
 .column {
   display: flex;

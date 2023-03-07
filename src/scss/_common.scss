@@ -13,11 +13,14 @@
 }
 
 %container {
-  max-width: 144rem;
   margin: 0 auto;
-  padding: 0 4%;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  max-width: 144rem;
+  min-width: 37.5rem;
 
-  @include media-min-width($xl) {
-    padding: 0 6rem;
+  @include media-max-width($xl) {
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
