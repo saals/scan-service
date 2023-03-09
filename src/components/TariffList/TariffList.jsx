@@ -1,6 +1,6 @@
 import styles from './tariff-list.module.scss'
 
-import { TARIFFS } from '../../constants'
+import { TARIFFS } from '../../utils/placeholders'
 import TariffCard from '../TariffCard/TariffCard'
 
 

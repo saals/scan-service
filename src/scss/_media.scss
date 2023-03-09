@@ -9,3 +9,9 @@ $xxl: 1400px;
     @content;
   }
 }
+
+@mixin media-max-width($max-width: 425px) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}

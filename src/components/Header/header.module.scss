@@ -1,0 +1,46 @@
+@use "../../scss/variables" as v;
+@use "../../scss/media" as *;
+@use "../../scss/common";
+
+.header {
+  //min-height: 93px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  @extend %container;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  //position: relative;
+
+  background-color: v.$white;
+  &.opened {
+    background-color: v.$seagreen;
+  }
+
+  @include media-max-width($md) {
+    //padding-bottom: 50px;
+  }
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 66%;
+
+  //position: relative;
+
+  @include media-max-width($lg) {
+    width: 73%;
+  }
+
+  @include media-max-width($md) {
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+  }
+}

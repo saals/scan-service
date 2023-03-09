@@ -1,8 +1,9 @@
 import styles from './layout.module.scss'
 
-import Logo from '../../components/Logo/Logo'
-import logoWhite from '../../assets/images/logo-white.png'
+// import Logo from '../../components/Logo/Logo'
+// import logoWhite from '../../assets/images/logo-white.png'
 import Footer from '../../components/Footer/Footer'
+import Header from '../../components/Header/Header'
 
 /*import Button from '../../components/Button/Button'
 import { ReactComponent as GoogleSVG } from '../../assets/images/google.svg';
@@ -18,10 +19,7 @@ import { TARIFFS } from '../../constants'*/
 const Layout = ({ children }) => {
   return (
     <>
-      <header>
-        header
-        <Logo />
-      </header>
+      <Header />
 
       <main className={styles.main}>{children}</main>
 

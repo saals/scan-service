@@ -1,3 +1,9 @@
+export const MAIN_NAV_LINKS = [
+  { name: 'Главная', path: 'home' },
+  { name: 'Тарифы', path: 'rate' },
+  { name: 'FAQ', path: 'faq' },
+]
+
 export const TARIFFS = [
   {
     title: 'Beginner',
