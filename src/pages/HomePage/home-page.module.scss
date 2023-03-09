@@ -1,0 +1,42 @@
+//@use "../../scss/variables" as v;
+@use "../../scss/common";
+@use "../../scss/media" as *;
+
+
+.hero {
+  padding: 4.5rem 0;
+  background: url("../../assets/images/bg-hero.jpg") right bottom no-repeat;
+  background-size: 42%;
+
+  @include media-max-width($md) {
+    padding: 2rem 0 40%;
+    background-size: 50%;
+  }
+
+  @include media-max-width($sm) {
+    padding-bottom: 88%;
+    background-size: 92%;
+  }
+}
+
+.title {
+  width: 55%;
+  //margin-bottom: 2rem;
+  font-size: 6rem;
+
+  &.title {
+    @extend %section-title;
+  }
+}
+
+.subtitle {
+  width: 48%;
+  margin-bottom: 7rem;
+  font-size: 2rem;
+
+  @include media-max-width($md) {
+    width: 70%;
+    margin-bottom: 3rem;
+    font-size: 18px;
+  }
+}
