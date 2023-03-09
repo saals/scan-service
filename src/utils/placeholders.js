@@ -1,3 +1,8 @@
+import feature1 from '../assets/images/feature-1.svg'
+import feature2 from '../assets/images/feature-2.svg'
+import feature3 from '../assets/images/feature-3.svg'
+
+
 export const MAIN_NAV_LINKS = [
   { name: 'Главная', path: 'home' },
   { name: 'Тарифы', path: 'rate' },
@@ -40,4 +45,37 @@ export const TARIFFS = [
       'Приоритетная поддержка',
     ]
   },
+]
+
+export const FEATURES = [
+  {
+    id: 'f1',
+    icon: feature1,
+    desc: 'Высокая и оперативная скорость обработки заявки'
+  },
+  {
+    id: 'f2',
+    icon: feature2,
+    desc: 'Огромная комплексная база данных, обеспечивающая объективный ответ на запрос'
+  },
+  {
+    id: 'f3',
+    icon: feature3,
+    desc: 'Защита конфеденциальных сведений, не подлежащих разглашению по федеральному законодательству'
+  },
+  {
+    id: 'f4',
+    icon: feature1,
+    desc: 'скорость обработки заявки'
+  },
+  {
+    id: 'f5',
+    icon: feature2,
+    desc: 'Огромная комплексная база данных'
+  },
+  /*  {
+      id: 'f6',
+      icon: feature3,
+      desc: 'Защита конфеденциальных сведений'
+    },*/
 ]

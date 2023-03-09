@@ -2,6 +2,10 @@ import styles from './home-page.module.scss'
 
 import Layout from '../Layout/Layout'
 import Button from '../../components/Button/Button'
+import Slider from '../../components/Slider/SLider'
+import { featuresSliderSettings } from '../../components/Slider/settings'
+import SlideFeature from '../../components/SlideFeature/SlideFeature'
+import { FEATURES } from '../../utils/placeholders'
 
 
 const HomePage = () => {
@@ -18,6 +22,12 @@ const HomePage = () => {
         <Button href={'/search'} color={'accent'} size={'big'}>
           Запросить данные
         </Button>
+      </section>
+
+      <section className={styles.features}>
+        <h2 className={styles.title}>Почему именно мы</h2>
+        <Slider className={styles.slider} slideComponent={SlideFeature}
+                slides={FEATURES} settings={featuresSliderSettings} />
       </section>
     </Layout>
   )
