@@ -21,12 +21,8 @@
 
 h1.title {
   width: 55%;
-  //margin-bottom: 2rem;
+  margin-bottom: 2rem;
   font-size: 6rem;
-
-/*  &.title {
-    @extend %section-title;
-  }*/
 }
 
 .title {
@@ -72,3 +68,16 @@ h1.title {
     margin-top: 3rem;
   }
 }
+
+.tariffs {
+  padding: 4.5rem 0;
+
+  .title {
+    margin-bottom: 7rem;
+
+    @include media-max-width($md) {
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+

@@ -5,7 +5,9 @@ import Button from '../../components/Button/Button'
 import Slider from '../../components/Slider/SLider'
 import { featuresSliderSettings } from '../../components/Slider/settings'
 import SlideFeature from '../../components/SlideFeature/SlideFeature'
-import { FEATURES } from '../../utils/placeholders'
+import { FEATURES, TARIFFS } from '../../utils/placeholders'
+import CardList from '../../components/CardList/CardList'
+import TariffCard from '../../components/TariffCard/TariffCard'
 
 
 const HomePage = () => {
@@ -28,6 +30,11 @@ const HomePage = () => {
         <h2 className={styles.title}>Почему именно мы</h2>
         <Slider className={styles.slider} slideComponent={SlideFeature}
                 slides={FEATURES} settings={featuresSliderSettings} />
+      </section>
+
+      <section className={styles.tariffs}>
+        <h2 className={styles.title}>Наши тарифы</h2>
+        <CardList cardComponent={TariffCard} cardList={TARIFFS} />
       </section>
     </Layout>
   )

@@ -36,7 +36,7 @@ const TariffCard = ({
         <div className={styles.price}>
           <p>{price} ₽ <del>{oldPrice} ₽</del></p>
           {creditPrice &&
-            <p>или {creditPrice} ₽/мес. при рассрочке на 24 мес.</p>}
+            <p>или {creditPrice} ₽/мес. при рассрочке на&nbsp;24&nbsp;мес.</p>}
         </div>
 
         <div className={styles.desc}>
