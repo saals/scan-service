@@ -9,12 +9,15 @@ import UserNav from '../UserNav/UserNav'
 import Burger from '../Burger/Burger'
 
 import logoWhite from '../../assets/images/logo-white.png'
+import { useAuth } from '../../hooks/useAuth'
+
 
 
 const cx = classNames.bind(styles)
 
 const Header = () => {
   const [ showMobileMenu, setShowMobileMenu ] = useState(false)
+  const { isLoggedIn } = useAuth()
 
   const headerClass = cx({
     header:true,
@@ -26,7 +29,7 @@ const Header = () => {
       <Logo src={(showMobileMenu && logoWhite) || undefined} />
       <div className={styles.wrap}>
         <MainNav showMobileMenu={showMobileMenu} />
-        <Informer />
+        {isLoggedIn && <Informer />}
         <UserNav showMobileMenu={showMobileMenu} />
       </div>
       <Burger onClick={() => setShowMobileMenu(!showMobileMenu)}

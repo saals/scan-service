@@ -2,6 +2,7 @@ import classNames from 'classnames/bind'
 import styles from './tariff-card.module.scss'
 
 import Button from '../Button/Button'
+import { useAuth } from '../../hooks/useAuth'
 
 
 const cx = classNames.bind(styles)
@@ -17,7 +18,8 @@ const TariffCard = ({
                       }
                     }) => {
 
-  const currentTariff = title === 'Beginner'
+  const { user } = useAuth()
+  const currentTariff = title === user?.tariff
 
   const cardClass = cx({
     card: true,
@@ -46,7 +48,8 @@ const TariffCard = ({
           </ul>
         </div>
 
-        <Button href={'/some-link'} color={currentTariff ? 'gray' : 'accent'} size={'smail'}>
+        <Button href={'/some-link'} color={currentTariff ? 'gray' : 'accent'}
+                size={'smail'}>
           {currentTariff ? 'Перейти в личный кабинет' : 'Подробнее'}
         </Button>
       </div>

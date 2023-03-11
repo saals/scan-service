@@ -5,7 +5,7 @@
 .nav {
   height: min-content;
   padding-right: 0;
-  text-align: right;
+  //text-align: right;
   position: relative;
 
   //
@@ -13,7 +13,7 @@
   //
 
   @include media-max-width($md){
-    text-align: center;
+    //text-align: center;
     display: none;
     margin-bottom: 4rem;
 
@@ -22,7 +22,7 @@
     }
   }
 
-  &.isLogged {
+  &.isLoggedIn {
     padding-right: 3.5rem;
   }
 }
@@ -47,19 +47,19 @@
     }
 
     &:last-child {
-      padding: .5rem 1.1rem;
+      padding: .7rem 1.1rem;
       font-weight: 500;
       border-radius: v.$bd-radius;
       background-color: v.$primary;
       opacity: 1;
 
       @include media-max-width($sm) {
-        width: 100%;
+        //width: 100%;
       }
     }
   }
 
-  &.isLogged {
+  &.isLoggedIn {
     display: block;
 
     &:first-child {
@@ -69,6 +69,7 @@
     &:last-child {
       font-size: 1rem;
       opacity: 0.4;
+      margin-left: auto;
     }
   }
 }

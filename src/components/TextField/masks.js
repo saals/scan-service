@@ -15,16 +15,16 @@ const phoneMask = [
   ' ',
   /\d/,
   /\d/,
-];
+]
 
-const getMaskByInputName = (name) => {
+const getMaskByInputName = ({ name }) => {
   switch (name) {
     case 'phone':
-      return phoneMask;
+      return phoneMask
 
     default:
-      return false;
+      return false
   }
-};
+}
 
-export default getMaskByInputName;
+export default getMaskByInputName

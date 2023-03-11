@@ -6,11 +6,11 @@ import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 
 /*import Button from '../../components/Button/Button'
-import { ReactComponent as GoogleSVG } from '../../assets/images/google.svg';
+import { ReactComponent as GoogleSVG } from '../../assets/images/google.svg'
 import {
   ReactComponent as FacebookSVG
-} from '../../assets/images/facebook.svg';
-import { ReactComponent as YandexSVG } from '../../assets/images/yandex.svg';
+} from '../../assets/images/facebook.svg'
+import { ReactComponent as YandexSVG } from '../../assets/images/yandex.svg'
 import CardList from '../../components/CardList/CardList'
 import TariffCard from '../../components/TariffCard/TariffCard'
 import { TARIFFS } from '../../constants'*/

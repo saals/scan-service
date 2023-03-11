@@ -9,7 +9,7 @@
   background-size: 42%;
 
   @include media-max-width($md) {
-    padding: 2rem 0 40%;
+    padding: 1rem 0 40%;
     background-size: 50%;
   }
 

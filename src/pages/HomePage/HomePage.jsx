@@ -8,9 +8,12 @@ import SlideFeature from '../../components/SlideFeature/SlideFeature'
 import { FEATURES, TARIFFS } from '../../utils/placeholders'
 import CardList from '../../components/CardList/CardList'
 import TariffCard from '../../components/TariffCard/TariffCard'
+import { useAuth } from '../../hooks/useAuth'
 
 
 const HomePage = () => {
+  const { isLoggedIn } = useAuth()
+
   return (
     <Layout>
       <section className={styles.hero}>
@@ -21,7 +24,8 @@ const HomePage = () => {
           Комплексный анализ публикаций, получение данных в формате PDF на
           электронную почту.
         </p>
-        <Button href={'/search'} color={'accent'} size={'big'}>
+        <Button href={'/search'} disabled={!isLoggedIn}
+                color={'accent'} size={'big'}>
           Запросить данные
         </Button>
       </section>

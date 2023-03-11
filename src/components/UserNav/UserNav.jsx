@@ -1,46 +1,56 @@
-import { useState } from 'react'
 import styles from './user-nav.module.scss'
 import classNames from 'classnames/bind'
 
-import avatar from '../../assets/images/avatar.png'
+// import avatar from '../../assets/images/avatar.png'
 
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { LOGIN_URL, HOME_URL } from '../../utils/constants'
+import { useAuth } from '../../hooks/useAuth'
+import { logout } from '../../redux/slices/authSlice'
 
 const cx = classNames.bind(styles)
 
 const UserNav = ({ showMobileMenu }) => {
-  const [ isLogged, setIsLogged ] = useState(true)
+  const { isLoggedIn, user } = useAuth()
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const navClass = cx({
     nav: true,
-    isLogged,
+    isLoggedIn,
     opened: showMobileMenu
   })
 
   const linkClass = cx({
     link: true,
-    isLogged,
-    notLogged: !isLogged
+    isLoggedIn,
+    notLogged: !isLoggedIn
   })
 
-  const handleClick = (e) => {
-    e.preventDefault()
-    setIsLogged(!isLogged)
+  const handleLoginClick = () => navigate(LOGIN_URL)
+
+  const handleLogoutClick = () => {
+    dispatch(logout())
+    navigate(HOME_URL)
   }
 
   return (
     <nav className={navClass}>
-      <a href="/user" className={linkClass}>
-        {isLogged ? 'Алексей А.' : 'Зарегистрироваться'}
+      <a href='#' className={linkClass}>
+        {isLoggedIn ? user.name : 'Зарегистрироваться'}
       </a>
 
-      {isLogged && <img src={avatar} alt="аватар"
+      {isLoggedIn && <img src={user.avatar} alt='аватар'
                         className={styles.img} />}
 
-      <a href="/" className={linkClass} onClick={handleClick}>
-        {isLogged ? 'Выйти' : 'Войти'}
-      </a>
+      <button className={linkClass}
+              onClick={isLoggedIn ? handleLogoutClick : handleLoginClick}>
+        {isLoggedIn ? 'Выйти' : 'Войти'}
+      </button>
     </nav>
   )
 }
 
 export default UserNav
+// todo
