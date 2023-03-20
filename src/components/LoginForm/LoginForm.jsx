@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import styles from './login-form.module.scss'
 import { Formik, Form } from 'formik'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 import Button from '../Button/Button'
 import TextField from '../TextField/TextField'
@@ -23,10 +23,13 @@ const LoginForm = () => {
   ] = useLoginMutation()
 
   const navigate = useNavigate()
+  const location = useLocation()
+
+  const from = location.state?.from?.pathname || HOME_URL
 
   useEffect(() => {
     if (isLoginSuccess) {
-      navigate(HOME_URL)
+      navigate(from)
     }
   }, [ isLoginLoading ])
 
