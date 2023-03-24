@@ -32,8 +32,11 @@
   //color: red;
 
   %text-input {
-    color: #ff5959;
-    border-color: #ff5959;
+    input[type='text'],
+    input[type='password'] {
+      color: #ff5959;
+      //border-color: #ff5959;
+    }
   }
 
   &-message {
@@ -45,4 +48,14 @@
     text-align: center;
     color: #ff5959;
   }
+}
+
+::placeholder {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.03em;
+  color: #949494;
+  text-align: center;
+  opacity: 0.4;
 }

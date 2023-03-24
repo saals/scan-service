@@ -1,21 +1,21 @@
 @use '../../scss/forms';
 
-.group {
-  @extend %input-group;
-}
+//.group {
+//  @extend %input-group;
+//}
 
-.error {
-  @extend %error;
-}
+//.error {
+//  @extend %error;
+//}
 
-.label {
-  @extend %label;
-}
+//.label {
+//  @extend %label;
+//}
 
 .input {
   @extend %text-input;
 }
 
-.message {
-  @extend %error-message;
-}
+//.message {
+//  @extend %error-message;
+//}

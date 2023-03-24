@@ -1,14 +1,80 @@
 @use '../../scss/forms';
+@use "../../scss/variables" as v;
+@use "../../scss/media" as *;
+@use "../../scss/common";
 
 
 .form {
+  max-width: 87.2rem;
+  min-height: 54.3rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  padding: 4rem;
+
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+
+  p {
+    width: 100%;
+    margin-top: .8rem;
+    font-size: 1.4rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  input, select {
+    font-size: 1.4rem;
+
+    font-family: inherit;
+    text-align: center;
+
+    width: 100%;
+  }
+
+  select {
+    text-align: left;
+  }
+
+  @include media-max-width($sm) {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+
+    input, input[type="date"], label, select {
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
 }
 
-.submit {
-  width: 100%;
-  margin-top: 1rem;
+.checkboxes {
+  margin-bottom: 1.5rem;
+}
+
+.submit-wrap {
+  align-self: end;
+  width: 45%;
+
+  @include media-max-width($md) {
+    width: 60%;
+  }
+  @include media-max-width($sm) {
+    width: 100%;
+    padding: 0 12%;
+  }
+
+  button {
+    width: 100%;
+  }
 }
 
 .errorMessage {

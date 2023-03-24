@@ -1,32 +1,28 @@
 import { useField } from 'formik'
-import classNames from 'classnames'
-// import MaskedInput from 'react-text-mask' //todo удалить?
+import MaskedInput from 'react-text-mask'
 
 import styles from './text-field.module.scss'
-// import getMaskByInputName from './masks'
+import getMaskByInputName from './masks'
+
+import FieldWrap from '../FieldWrap/FieldWrap'
 
 
-const TextField = ({ label, ...props }) => {
-  const [field, meta] = useField(props)
-  const hasError = meta.touched && meta.error
+const TextField = ({ label, className, ...props }) => {
+  const [ field, meta ] = useField(props)
+  const wrapOptions = {
+    label,
+    field,
+    meta,
+  }
 
-  const groupClass = classNames(styles.group, {
-    [`${styles.error}`]: hasError,
-  })
-
-  // const mask = getMaskByInputName(props.name)
+  const mask = getMaskByInputName(field)
 
   return (
-    <div className={groupClass}>
-      <label className={styles.label} htmlFor={props.id || props.name}>
-        {label}
-      </label>
-
-      <input className={styles.input} {...field} {...props} />
-      {/*<MaskedInput className={styles.input} {...field} {...props} mask={mask} />*/}
-
-      {hasError ? <div className={styles.message}>{meta.error}</div> : null}
-    </div>
+    <FieldWrap className={className} options={wrapOptions}>
+      <MaskedInput className={styles.input} type={'text'}
+                   {...field} {...props} mask={mask}
+      />
+    </FieldWrap>
   )
 }
 
