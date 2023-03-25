@@ -1,8 +1,8 @@
 import { string, number, date, setLocale } from 'yup'
 
 
-import { isINNLegalEntity, removeNonDigit, getTodayEnd } from './checkFunc'
-
+import { isINNLegalEntity } from './checkFunc'
+import { removeNonDigit, getTodayEnd } from '../helpers'
 
 setLocale({
   number: {

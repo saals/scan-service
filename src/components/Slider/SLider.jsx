@@ -53,14 +53,13 @@ const settings = {
 }*/
 
 
-const Slider = ({ className, slideComponent, slides, settings }) => {
+const Slider = ({ className, slideComponent, slides, settings, isLoading }) => {
   const Component = slideComponent
 
   return (
     <SlickSlider className={className} {...settings}>
-      {
-        slides
-          .map((slide) => {
+      {slides &&
+        slides.map((slide) => {
             return <Component key={slide.id || slide.date} slide={slide} />
           })
       }

@@ -4,7 +4,14 @@ import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-const Button = ({ color, size, href, type, disabled, onClick, children }) => {
+const openInNewTab = (url) => {
+  window.open(url, '_blank', 'noreferrer')
+}
+
+const Button = ({
+                  color, size, href, type, disabled,
+                  onClick, newWindow, children
+                }) => {
   const btnClass = cx({
     btn: !size,
     [`btn-${size}`]: size,
@@ -14,9 +21,16 @@ const Button = ({ color, size, href, type, disabled, onClick, children }) => {
   const Tag = href ? 'a' : 'button'
   const buttonType = type ? { type } : {}
 
+  const handleOnBlankClick = (e) => {
+    e.preventDefault()
+
+    openInNewTab(href)
+  }
+
   return (
-    <Tag className={btnClass} href={href} {...buttonType}
-         disabled={disabled} onClick={onClick}>
+    <Tag className={btnClass} href={href}
+         {...buttonType} disabled={disabled}
+         onClick={newWindow ? handleOnBlankClick : onClick}>
       {children}
     </Tag>
   )

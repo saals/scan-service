@@ -1,7 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { API_BASE_URL } from '../../utils/constants'
-import { setCredentials  } from '../slices/authSlice'
+import transformResponse from './transforms'
+
+import { setCredentials } from '../slices/authSlice'
 import { setAccountInfo } from '../slices/accountSlice'
+
+import { API_BASE_URL } from '../../utils/constants'
 
 
 export const scanApi = createApi({
@@ -36,7 +39,8 @@ export const scanApi = createApi({
           const { data } = await queryFulfilled
 
           dispatch(setCredentials(data))
-        } catch (error) {}
+        } catch (error) {
+        }
       },
     }),
 
@@ -52,10 +56,46 @@ export const scanApi = createApi({
           const { data } = await queryFulfilled
 
           dispatch(setAccountInfo(data))
-        } catch (error) {}
+        } catch (error) {
+        }
       },
+    }),
+
+    getObjectSearchHistograms: build.query({
+      query: (request) => ({
+        url: '/objectsearch/histograms',
+        method: 'POST',
+        body: request,
+      }),
+
+      transformResponse: transformResponse.getObjectSearchHistograms,
+    }),
+
+    getObjectSearch: build.query({
+      query: (request) => ({
+        url: '/objectsearch',
+        method: 'POST',
+        body: request,
+      }),
+
+      transformResponse: (result) => result.items,
+    }),
+
+
+    getDocuments: build.query({
+      query: (request) => ({
+        url: '/documents',
+        method: 'POST',
+        body: request,
+      }),
     }),
   }),
 })
 
-export const { useLoginMutation, useGetAccountInfoQuery } = scanApi
+export const {
+  useLoginMutation,
+  useGetAccountInfoQuery,
+  useGetObjectSearchHistogramsQuery,
+  useGetObjectSearchQuery,
+  useGetDocumentsQuery,
+} = scanApi

@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
           <Button color="accent" size="big">Запросить данные</Button>
           <Button href={'/'} color="accent" size="big">Запросить данные</Button>
 
-          <Button color="accent" size="smail">Подробнее</Button>
+          <Button color="accent" size="small">Подробнее</Button>
           <Button color="accent" size="big" disabled>Поиск</Button>
 
           <Button color="primary">Читать в источнике</Button>

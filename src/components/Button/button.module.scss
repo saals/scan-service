@@ -28,7 +28,7 @@
 .btn {
   @extend %btn;
 
-  &-smail {
+  &-small {
     @extend %btn;
     padding: 1.7rem 3rem;
     font-size: 2rem;

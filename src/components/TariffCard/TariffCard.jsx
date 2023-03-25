@@ -49,7 +49,7 @@ const TariffCard = ({
         </div>
 
         <Button href={'/some-link'} color={currentTariff ? 'gray' : 'accent'}
-                size={'smail'}>
+                size={'small'}>
           {currentTariff ? 'Перейти в личный кабинет' : 'Подробнее'}
         </Button>
       </div>

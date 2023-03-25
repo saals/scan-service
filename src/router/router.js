@@ -1,5 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 
+import { getFormValues } from './action'
+
 import {
   HOME_URL,
   LOGIN_URL,
@@ -13,7 +15,6 @@ import SearchPage from '../pages/SearchPage/SearchPage'
 import ResultPage from '../pages/ResultPage/ResultPage'
 import ErrorPage from '../pages/ErrorPage/ErrorPage'
 import RequireAuth from '../components/RequireAuth/RequireAuth'
-import { getFormValues } from './action'
 
 const router = createBrowserRouter([
   {
