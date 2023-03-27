@@ -6,5 +6,3 @@ export const HOME_URL = '/'
 export const LOGIN_URL = '/login'
 export const SEARCH_URL = '/search'
 export const RESULT_URL = '/search/result'
-
-//

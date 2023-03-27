@@ -5,7 +5,6 @@ import {
   ReactComponent as NextArrowSVG
 } from '../../assets/images/nextArrow.svg'
 
-
 const NextArrow = ({ currentSlide, slideCount, ...props }) => (
   <div {...props}>
     <NextArrowSVG />
@@ -35,26 +34,20 @@ export const featuresSliderSettings = {
       breakpoint: 1200,
       settings: {
         slidesToShow: 2,
-        // slidesToScroll: 2,
       },
     },
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        // slidesToScroll: 1,
       },
     },
   ],
 }
-//todo
+
 export const histogramsSliderSettings = {
   ...settings,
-  // dots: false,
-  // arrows: true,
-  // infinite: false,
   slidesToShow: 8,
-  // slidesToScroll: 2,
   responsive: [
     {
       breakpoint: 1200,

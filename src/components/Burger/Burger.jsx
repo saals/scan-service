@@ -1,7 +1,6 @@
 import styles from './burger.module.scss'
 import classNames from 'classnames/bind'
 
-
 const cx = classNames.bind(styles)
 
 const Burger = ({ onClick, showMobileMenu }) => {

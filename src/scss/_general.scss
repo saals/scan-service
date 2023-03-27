@@ -1,7 +1,6 @@
 @use "./variables" as v;
 @use "./common";
 
-
 html,
 body {
   font-family: v.$body-font;
@@ -45,17 +44,13 @@ a, button {
   color: v.$text-dark;
   text-decoration: none;
 
-  //@extend %transition;
-
   &:visited {
-    //color: v.$text-dark;
     text-decoration: none;
     outline: 0;
   }
 
   &:focus,
   &:active {
-    //color: v.$text-dark;
     text-decoration: underline;
     outline: 0;
   }

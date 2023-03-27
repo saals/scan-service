@@ -1,5 +1,4 @@
 import { formatISO } from 'date-fns/fp'
-
 import { removeNonDigit } from '../../utils/helpers'
 
 export const getObjectSearchRequest = (data) => {

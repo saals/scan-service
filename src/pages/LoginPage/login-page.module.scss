@@ -1,7 +1,5 @@
-//@use "../../scss/variables" as v;
 @use "../../scss/media" as *;
 @use "../../scss/common";
-
 
 .login {
   display: flex;
@@ -9,10 +7,8 @@
   gap: 3rem;
   padding-top: 7rem;
   padding-bottom: 7rem;
-
   flex-wrap: wrap;
   justify-content: space-between;
-
   background: url("../../assets/images/bg-login.svg") no-repeat left 18% bottom 70px;
   background-size: 26%;
 
@@ -21,12 +17,6 @@
     padding-bottom: 90%;
     background-size: 70%;
     background-position: center bottom 5%;
-  }
-
-  @include media-max-width($sm) {
-    //padding-bottom: 113%;
-    //background-size: 90%;
-    //background-position: center bottom 5%;
   }
 }
 

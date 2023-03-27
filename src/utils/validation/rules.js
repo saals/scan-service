@@ -1,6 +1,5 @@
 import { string, number, date, setLocale } from 'yup'
 
-
 import { isINNLegalEntity } from './checkFunc'
 import { removeNonDigit, getTodayEnd } from '../helpers'
 

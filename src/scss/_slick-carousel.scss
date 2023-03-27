@@ -23,7 +23,6 @@
   width: 2.6rem;
   height: auto;
   opacity: 0.4;
-  //@extend %transition;
   transition: opacity .3s ease-out;
 
   &:hover {
@@ -53,13 +52,4 @@
 
 .slick-track {
   display: flex;
-}
-
-.slick-slide {
-  //display: flex !important;
-  //height: auto;
-}
-
-.slick-slide div {
-  //display: flex !important;
 }

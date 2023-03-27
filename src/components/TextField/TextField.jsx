@@ -1,11 +1,8 @@
 import { useField } from 'formik'
 import MaskedInput from 'react-text-mask'
-
 import styles from './text-field.module.scss'
 import getMaskByInputName from './masks'
-
 import FieldWrap from '../FieldWrap/FieldWrap'
-
 
 const TextField = ({ label, className, ...props }) => {
   const [ field, meta ] = useField(props)

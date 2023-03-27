@@ -1,8 +1,6 @@
 import styles from './footer.module.scss'
-
 import Logo from '../Logo/Logo'
 import logoWhite from '../../assets/images/logo-white.png'
-
 
 const Footer = () => {
   return (

@@ -1,5 +1,4 @@
 import classNames from 'classnames'
-
 import styles from './field-wrap.module.scss'
 
 const InputWrap = ({ className, options, children }) => {

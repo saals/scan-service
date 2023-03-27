@@ -1,38 +1,5 @@
 @use "../../scss/common";
 
-//
 .main {
-  //display: flex;
-  //flex-direction: column;
   @extend %container;
-
-  //
-  //width: 100%;
-  //gap: 2rem;
-}
-
-// UIPage
-.container {
-  @extend %container;
-  border: 1px solid #000;
-}
-
-.row,
-.column {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  gap: 20px;
-
-  padding: 30px 0;
-}
-
-.column {
-  flex-direction: column;
-  //font-weight: 700;
-  //font-size: 16px;
-  //color: red;
-  //background-color: yellow;
 }

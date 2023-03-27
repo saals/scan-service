@@ -1,8 +1,5 @@
 import styles from './user-nav.module.scss'
 import classNames from 'classnames/bind'
-
-// import avatar from '../../assets/images/avatar.png'
-
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { LOGIN_URL, HOME_URL } from '../../utils/constants'
@@ -37,12 +34,12 @@ const UserNav = ({ showMobileMenu }) => {
 
   return (
     <nav className={navClass}>
-      <a href='#' className={linkClass}>
+      <a href="#" className={linkClass}>
         {isLoggedIn ? user.name : 'Зарегистрироваться'}
       </a>
 
-      {isLoggedIn && <img src={user.avatar} alt='аватар'
-                        className={styles.img} />}
+      {isLoggedIn && <img src={user.avatar} alt="аватар"
+                          className={styles.img} />}
 
       <button className={linkClass}
               onClick={isLoggedIn ? handleLogoutClick : handleLoginClick}>
@@ -53,4 +50,3 @@ const UserNav = ({ showMobileMenu }) => {
 }
 
 export default UserNav
-// todo

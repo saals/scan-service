@@ -1,18 +1,10 @@
 @use "../../scss/variables" as v;
 @use "../../scss/common";
 
-
 .footer {
-  //min-height: 137px;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   background-color: v.$seagreen;
-
-  //
-  //position: fixed;
-  //width: 100%;
-  //bottom: 0;
-  //
 }
 
 .wrap {

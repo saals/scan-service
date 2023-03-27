@@ -1,14 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
-
 import { getFormValues } from './action'
-
 import {
   HOME_URL,
   LOGIN_URL,
   SEARCH_URL,
   RESULT_URL,
 } from '../utils/constants'
-
 import HomePage from '../pages/HomePage/HomePage'
 import LoginPage from '../pages/LoginPage/LoginPage'
 import SearchPage from '../pages/SearchPage/SearchPage'

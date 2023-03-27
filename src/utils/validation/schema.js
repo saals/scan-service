@@ -1,5 +1,4 @@
 import { object } from 'yup'
-
 import { login, password, inn, limit, startDate, endDate } from './rules'
 
 export const loginValidationSchema = object({

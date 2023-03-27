@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './home-page.module.scss'
-
 import Layout from '../Layout/Layout'
 import Button from '../../components/Button/Button'
 import Slider from '../../components/Slider/SLider'
@@ -11,7 +10,6 @@ import CardList from '../../components/CardList/CardList'
 import TariffCard from '../../components/TariffCard/TariffCard'
 import { useAuth } from '../../hooks/useAuth'
 import { SEARCH_URL } from '../../utils/constants'
-
 
 const HomePage = () => {
   const { isLoggedIn } = useAuth()

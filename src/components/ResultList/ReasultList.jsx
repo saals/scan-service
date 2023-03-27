@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
-
 import Spinner from '../Spinner/Spinner'
 import Button from '../Button/Button'
 import ResultCard from '../ResultCard/ResultCard'
 import styles from './result-list.module.scss'
-
 import {
   useGetObjectSearchQuery,
   useGetDocumentsQuery,
@@ -52,7 +50,6 @@ const ResultList = ({ actionData }) => {
         documents.data.map((doc) => (
           <ResultCard key={doc.ok.id} doc={doc.ok} />
         ))}
-
       {canLoadMore && (
         <Button
           color="accent"

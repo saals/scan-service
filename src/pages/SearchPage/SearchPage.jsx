@@ -1,5 +1,4 @@
 import styles from './search-page.module.scss'
-
 import Layout from '../Layout/Layout'
 import SearchForm from '../../components/SearchForm/SearchForm'
 
@@ -13,9 +12,7 @@ const SearchPage = () => {
         <p className={styles.subtitle}>
           Задайте параметры поиска.<br />Чем больше заполните, тем точнее поиск
         </p>
-
         <SearchForm className={styles.form} />
-
       </section>
     </Layout>
   )

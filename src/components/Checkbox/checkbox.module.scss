@@ -1,5 +1,3 @@
-//@use '../../scss/forms';
-
 @use "../../scss/variables" as v;
 @use "../../scss/media" as *;
 @use "../../scss/common";
@@ -30,7 +28,6 @@ input[type="checkbox"] {
       border: 1px solid v.$black;
       position: absolute;
       left: 0;
-      //bottom: 0;
     }
   }
 
@@ -39,7 +36,6 @@ input[type="checkbox"] {
       opacity: 1;
 
       &:before {
-        //content: url(${ok});
         background: url("../../assets/images/ok.png") center / 70% no-repeat;
       }
     }

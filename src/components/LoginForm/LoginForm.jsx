@@ -2,15 +2,12 @@ import { useEffect } from 'react'
 import styles from './login-form.module.scss'
 import { Formik, Form } from 'formik'
 import { useNavigate, useLocation } from 'react-router-dom'
-
 import Button from '../Button/Button'
 import TextField from '../TextField/TextField'
 import { initialValues } from './params'
-// import validationSchema from '../../utils/validationShema'
 import { loginValidationSchema } from '../../utils/validation/schema'
 import { HOME_URL } from '../../utils/constants'
 import { useLoginMutation } from '../../redux/api/scan'
-
 
 const LoginForm = () => {
   const [
@@ -32,8 +29,6 @@ const LoginForm = () => {
     if (isLoginSuccess) {
       navigate(from)
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ isLoginLoading ])
 
   const handleOnSubmit = (values, { setSubmitting }) => {

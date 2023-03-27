@@ -2,17 +2,13 @@
 @use "../../scss/media" as *;
 @use "../../scss/common";
 
-
 .map {
   width: 42.9rem;
-  //min-height: 52.3rem;
   color: #949494;
-
   padding: 2.5rem;
   font-size: 1.6rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
   border-radius: v.$bd-radius*2;
-
   position: relative;
 
   &::before {

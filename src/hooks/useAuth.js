@@ -13,6 +13,6 @@ export const useAuth = () => {
 
   return useMemo(
     () => ({ isLoggedIn, user, expire }),
-    [isLoggedIn, user, expire]
+    [ isLoggedIn, user, expire ]
   )
 }

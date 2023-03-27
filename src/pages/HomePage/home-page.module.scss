@@ -1,7 +1,5 @@
-//@use "../../scss/variables" as v;
 @use "../../scss/common";
 @use "../../scss/media" as *;
-
 
 .hero {
   padding: 4.5rem 0;
@@ -46,7 +44,7 @@ h1.title {
 }
 
 .features {
-  padding: 4.5rem 0 58rem; //
+  padding: 4.5rem 0 58rem;
   background: url("../../assets/images/bg-about.svg") left bottom no-repeat;
 
   @include media-max-width($md) {
@@ -80,4 +78,3 @@ h1.title {
     }
   }
 }
-

@@ -1,23 +1,18 @@
 import { Formik, Form } from 'formik'
 import classNames from 'classnames'
 import { useSubmit } from 'react-router-dom'
-
 import styles from './search-form.module.scss'
 import { initialValues, dateRangeOptions } from './params'
-
 import Button from '../Button/Button'
 import TextField from '../TextField/TextField'
 import SelectField from '../SelectField/SelectField'
 import Checkbox from '../Checkbox/Checkbox'
 import DateRangeField from '../DateRangeField/DateRangeField'
-
 import { RESULT_URL } from '../../utils/constants'
 import { searchValidationSchema } from '../../utils/validation/schema'
 
-
 const SearchForm = ({ className }) => {
   const formClass = classNames(styles.form, className)
-
   const submit = useSubmit()
 
   const handleOnSubmit = async (values, { setSubmitting }) => {

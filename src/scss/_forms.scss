@@ -10,32 +10,21 @@
 
 %label {
   padding-bottom: 1.5rem;
-  //font-size: 1.6rem;
-  //line-height: 1.9rem;
-  //color: #949494;
   cursor: pointer;
 }
 
 %text-input {
   padding: 1.1rem;
-  //padding: 1.2rem 1.9rem;
-  //font-size: 1.6rem;
-  //line-height: 1.9rem;
-  //color: v.$black;
-  //background-color: v.$white;
   border: .1rem solid #c7c7c7;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.05);
   border-radius: v.$bd-radius;
 }
 
 %error {
-  //color: red;
-
   %text-input {
     input[type='text'],
     input[type='password'] {
       color: #ff5959;
-      //border-color: #ff5959;
     }
   }
 

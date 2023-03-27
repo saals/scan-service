@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-
 import { scanApi } from './api/scan'
 import authReducer from './slices/authSlice'
 import accountReducer from './slices/accountSlice'

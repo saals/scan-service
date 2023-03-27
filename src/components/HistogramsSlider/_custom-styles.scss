@@ -13,9 +13,6 @@
     @include media-min-width($sm) {
       margin-left: 3.5rem;
       margin-right: 3.5rem;
-
-      //todo
-      //min-height: 150px;
     }
   }
 
@@ -24,7 +21,6 @@
     width: 2.6rem;
     height: auto;
     opacity: 0.4;
-    //@extend %transition;
 
     &:hover {
       opacity: 1;

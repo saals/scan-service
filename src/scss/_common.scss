@@ -1,9 +1,5 @@
 @use "./media" as *;
 
-
-/*%transition {
-  transition: all 0.3s ease-out;
-}*/
 %hover {
   transition: text-shadow .3s ease-out;
 
@@ -27,7 +23,6 @@
 }
 
 %section-title {
-  //margin-bottom: 3rem;
 
   @include media-max-width($xl) {
     font-size: 4rem;

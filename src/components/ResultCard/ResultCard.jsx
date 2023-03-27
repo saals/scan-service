@@ -1,8 +1,6 @@
 import { format, parseISO } from 'date-fns'
-
 import styles from './result-card.module.scss'
 import { getContent } from './helpers'
-
 import Button from '../Button/Button'
 
 const ResultCard = ({ doc }) => {
@@ -14,18 +12,14 @@ const ResultCard = ({ doc }) => {
     title: { text: title },
     content: { markup },
   } = doc
-
   const date = format(parseISO(issueDate), 'dd.MM.yyyy')
-
   const { bgUrl, content } = getContent(markup)
-
   const hasTags = isTechNews || isAnnouncement || isDigest
 
   return (
     <div className={styles.card}>
       <div className={styles.meta}>
         <span className={styles.date}>{date}</span>
-
         {url ? (
           <a className={styles.source} href={url}>
             {sourceName}
@@ -34,7 +28,6 @@ const ResultCard = ({ doc }) => {
           <span>{sourceName}</span>
         )}
       </div>
-
       <h3 className={styles.title}>{title}</h3>
 
       {hasTags && (
@@ -62,7 +55,6 @@ const ResultCard = ({ doc }) => {
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: content }}
       />
-
       <div className={styles.footer}>
         {url && (
           <Button
@@ -74,7 +66,6 @@ const ResultCard = ({ doc }) => {
             Читать в источнике
           </Button>
         )}
-
         <p className={styles.wordCount}>Слов: {wordCount}</p>
       </div>
     </div>

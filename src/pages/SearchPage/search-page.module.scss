@@ -1,10 +1,7 @@
-//@use "../../scss/variables" as v;
 @use "../../scss/media" as *;
 @use "../../scss/common";
 
 .search {
-  //display: flex;
-  //align-items: flex-start;
   padding-top: 7rem;
   padding-bottom: 7rem;
 
@@ -30,8 +27,6 @@
   }
 
   .form {
-    //width: 65%;
-
     @include media-max-width($lg) {
       width: 100%;
     }

@@ -1,9 +1,7 @@
 import classNames from 'classnames/bind'
 import styles from './tariff-card.module.scss'
-
 import Button from '../Button/Button'
 import { useAuth } from '../../hooks/useAuth'
-
 
 const cx = classNames.bind(styles)
 

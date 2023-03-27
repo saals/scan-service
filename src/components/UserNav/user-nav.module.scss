@@ -5,15 +5,10 @@
 .nav {
   height: min-content;
   padding-right: 0;
-  //text-align: right;
   position: relative;
-
-  //
   flex-shrink: 0;
-  //
 
   @include media-max-width($md){
-    //text-align: center;
     display: none;
     margin-bottom: 4rem;
 
@@ -52,10 +47,6 @@
       border-radius: v.$bd-radius;
       background-color: v.$primary;
       opacity: 1;
-
-      @include media-max-width($sm) {
-        //width: 100%;
-      }
     }
   }
 

@@ -1,15 +1,12 @@
 import styles from './informer.module.scss'
 import Spinner from '../Spinner/Spinner'
-
 import { useGetAccountInfoQuery } from '../../redux/api/scan'
-
 
 const Informer = () => {
   const { data: limits, isFetching } = useGetAccountInfoQuery()
 
   return (
     <div className={styles.informer}>
-
       {isFetching ? (
         <Spinner />
       ) : (
@@ -20,7 +17,6 @@ const Informer = () => {
             className={styles['num-color']}>{limits?.companyLimit}</span></p>
         </>
       )}
-
     </div>
   )
 }

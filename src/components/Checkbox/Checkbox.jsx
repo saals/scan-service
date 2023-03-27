@@ -1,11 +1,9 @@
 import { useField } from 'formik'
 import classNames from 'classnames'
-
 import styles from './checkbox.module.scss'
 
 const Checkbox = ({ label, className, ...props }) => {
   const [ field ] = useField(props)
-
   const groupClass = classNames(styles.group, className)
 
   return (
@@ -18,9 +16,7 @@ const Checkbox = ({ label, className, ...props }) => {
         {...field}
         {...props}
       />
-
       <label htmlFor={field.id || field.name}
-        // className={styles.label}
       >
         {label}
       </label>

@@ -1,8 +1,5 @@
 import { useField } from 'formik'
-
 import styles from './select-field.module.scss'
-
-// import InputWrap from '../InputWrap/InputWrap'
 import FieldWrap from '../FieldWrap/FieldWrap'
 
 const SelectInput = ({ label, className, children, ...props }) => {

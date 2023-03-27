@@ -4,7 +4,6 @@ import { ReactComponent as GoogleSVG } from '../../assets/images/google.svg'
 import { ReactComponent as FacebookSVG } from '../../assets/images/facebook.svg'
 import { ReactComponent as YandexSVG } from '../../assets/images/yandex.svg'
 
-
 const LoginMap = ({ children }) => {
   return (
     <div className={styles.map}>

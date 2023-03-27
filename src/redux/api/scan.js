@@ -1,11 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import transformResponse from './transforms'
-
 import { setCredentials } from '../slices/authSlice'
 import { setAccountInfo } from '../slices/accountSlice'
-
 import { API_BASE_URL } from '../../utils/constants'
-
 
 export const scanApi = createApi({
   reducerPath: 'scanApi',

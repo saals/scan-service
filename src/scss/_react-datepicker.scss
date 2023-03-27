@@ -2,6 +2,6 @@
 
 @forward 'react-datepicker/src/stylesheets/datepicker.scss' with (
   $datepicker__font-family: v.$body-font,
-  $datepicker__font-size: 10px, // v.$font-size
-  $datepicker__item-size: 2.5rem // 3.5rem
+  $datepicker__font-size: 10px,
+  $datepicker__item-size: 2.5rem ,
 );

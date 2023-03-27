@@ -7,7 +7,6 @@
   min-height: 42rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-
   background: url("../../assets/images/bg-result.svg") no-repeat right 4rem bottom 2.5rem;
   background-size: 40%;
 
@@ -15,7 +14,6 @@
     padding-bottom: 65%;
     background-size: 90%;
     background-position: center bottom;
-
   }
 }
 
@@ -23,14 +21,6 @@
   font-size: 3rem;
   width: 37%;
   margin-bottom: 3rem;
-
-  &.title {
-    //@extend %section-title;
-  }
-
-  //@include media-max-width($md) {
-  //  width: 100%;
-  //}
 }
 
 h1.title {
@@ -45,4 +35,9 @@ h1.title {
     width: 70%;
     font-size: 1.8rem;
   }
+}
+
+.result-info {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }

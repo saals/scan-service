@@ -2,7 +2,6 @@ import feature1 from '../assets/images/feature-1.svg'
 import feature2 from '../assets/images/feature-2.svg'
 import feature3 from '../assets/images/feature-3.svg'
 
-
 export const MAIN_NAV_LINKS = [
   { name: 'Главная', path: '' },
   { name: 'Тарифы', path: 'rate' },
